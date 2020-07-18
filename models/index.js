@@ -9,9 +9,6 @@ var config = require(__dirname + '/../config/config.json')[env];
 var db = {};
 
 
-var date = new Date();
-console.log(date);
-
 // we are creating our new sequalize, using this to talk to our database.
 if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable]);
